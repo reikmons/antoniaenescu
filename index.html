@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>antonia enescu</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-left: 20px; /* Move title to the left */
+            font-size: 2rem; /* Adjust font size as needed */
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 90%;
+            height: auto;
+            border-radius: 0px;
+        }
+        /* Apply grayscale filter and narrow the first image */
+        .gallery img[alt="Black and White Landscape"], 
+        .gallery img[alt="bw valencia-2"],
+        .gallery img[alt="ador bw"],
+        .gallery img[alt="plante bw"]
+        {
+            filter: grayscale(100%);
+            width: 100%; /* Narrow the image, adjust as needed */
+            height: 100%; /* Keep the aspect ratio */
+            object-fit: cover; /* Ensure the image covers the area */
+            max-height: 250px; /* Limit height for better control */
+        }
+        video {
+            width: 100%; /* Ensure video fills container width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px;
+            object-fit: contain; /* Ensures it maintains original aspect ratio */
+            pointer-events: none; /* Disable any interaction with the video to remove the play button overlay */
+        }
+
+        /* Add margin-bottom to video container to create space */
+        .video-container {
+            margin-bottom: 100px; /* Adjust value as needed */
+        }
+
+        /* Style for image-container */
+        .image-container {
+            position: relative; /* This is important for the overlay text */
+            display: inline-block;
+            width: 100%;
+            max-width: 100%; /* Control the width as needed */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 0%;
+            object-fit: cover;
+        }
+
+        /* Overlay text style */
+        .overlay-text {
+            position: absolute;
+            top: 50%; /* Center the text vertically */
+            left: 50%; /* Center the text horizontally */
+            transform: translate(-50%, -50%); /* Fine-tune the positioning */
+            color: white;
+            font-size: 50px; /* Adjust text size as needed */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional text shadow for better visibility */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .gallery img {
+                width: 100%;
+            }
+            video {
+                max-width: 100%; /* Ensure video fits on tablets */
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;
+                max-height: 200px;
+            }
+            video {
+                max-width: 100%; /* Ensure video fits on mobile */
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>antonia enescu</h1>
+    <div class="gallery">
+        <div class="video-container">
+            <!-- Video added before the first image -->
+            <video autoplay muted loop id="myVideo">
+                <source src="video/enescu antonia.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Image with overlay text -->
+        <div class="image-container">
+            <img src="images/kickbox-12.jpg" alt="Black and White Landscape">
+            <div class="overlay-text">sport</div>
+        </div>
+
+        <!-- Rest of your images -->
+        <img src="images/kickbox-1.jpg" alt="photo 1">
+        <img src="images/kickbox-8.jpg" alt="Photo 2">
+        <img src="images/kickbox-10.jpg" alt="Photo 3">
+        <img src="images/kickbox-9.jpg" alt="Photo 4">
+        <img src="images/kickbox-2.jpg" alt="Photo 4">
+        <img src="images/kickbox-12.jpg" alt="Photo 4">
+        <img src="images/valencia-2.jpg" alt="bw valencia-2">
+        <img src="images/valencia-1.jpg" alt="Photo 4">
+        <img src="images/valencia.jpg" alt="Photo 4">
+        <img src="images/mozaic.jpg" alt="Photo 4">
+        <img src="images/maicute.jpg" alt="Photo 4">
+        <img src="images/IMG_3895_Original.jpg" alt="Photo 4">
+        <img src="images/IMG_3901_Original.jpg" alt="Photo 4">
+        <img src="images/valencia-2.jpg" alt="Photo 4">
+        <img src="images/ADOR-25.jpg" alt="ador bw">
+        <img src="images/ADOR-122.jpg" alt="Photo 4">
+        <img src="images/ADOR-83.jpg" alt="Photo 4">
+        <img src="images/ADOR-41.jpg" alt="Photo 4">
+        <img src="images/ADOR-42.jpg" alt="Photo 4">
+        <img src="images/ADOR-50.jpg" alt="Photo 4">
+        <img src="images/ADOR-25.jpg" alt="Photo 4">
+        <img src="images/plante.jpg" alt="plante bw">
+        <img src="images/plaja.jpg" alt="Photo 4">
+        <img src="images/copaci.jpg" alt="Photo 4">
+        <img src="images/DSC01047.jpg" alt="Photo 4">
+        <img src="images/IMG_8646_Original.jpg" alt="Photo 4">
+        <img src="images/IMG_9298_Original.jpg" alt="Photo 4">
+        <img src="images/Proto si ANTVAL.jpg" alt="Photo 4">
+        <img src="images/plante.jpg" alt="Photo 4">
+        <img src="images/sinaia-2.jpg" alt="Photo 4">
+        <img src="images/sinaia-3.jpg" alt="Photo 4">
+    </div>
+</body>
+</html>
